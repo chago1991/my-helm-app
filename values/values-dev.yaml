@@ -1,4 +1,6 @@
 # values for development environment
+# values.yaml
+appName: web-app
 replicaCount: 2
 image:
   repository: your-web-app-repo
