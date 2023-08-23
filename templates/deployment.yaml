@@ -7,7 +7,7 @@ spec:
   template:
     spec:
       containers:
-        - name: my-web-app
+        - name: nginx
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
 ---
 apiVersion: v1
