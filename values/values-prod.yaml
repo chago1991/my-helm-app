@@ -6,8 +6,5 @@ image:
   tag: latest
 appName: web-app
 replicaCount: 3
-image:
-  repository: your-web-app-repo
-  tag: prod-latest
 service:
   type: LoadBalancer
