@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "my-web-app.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  template:
+    spec:
+      containers:
+        - name: my-web-app
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "my-web-app.fullname" . }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: {{ include "my-web-app.fullname" . }}

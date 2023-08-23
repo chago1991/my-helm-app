@@ -1,0 +1,7 @@
+# values for development environment
+replicaCount: 2
+image:
+  repository: your-web-app-repo
+  tag: dev-latest
+service:
+  type: ClusterIP
