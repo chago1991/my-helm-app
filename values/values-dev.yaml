@@ -1,5 +1,9 @@
 # values for development environment
 # values.yaml
+# values.yaml
+image:
+  repository: nginx
+  tag: latest
 appName: web-app
 replicaCount: 2
 image:
