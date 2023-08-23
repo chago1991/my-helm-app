@@ -6,8 +6,5 @@ image:
   tag: latest
 appName: web-app
 replicaCount: 2
-image:
-  repository: your-web-app-repo
-  tag: dev-latest
 service:
   type: ClusterIP
